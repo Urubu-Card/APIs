@@ -1,2 +1,2 @@
-# API
-Esse repositório contem a utilização de API utilizando Python com a interface do Streamlit
+# API'S
+Esse repositório contem a utilização de API'S utilizando Python com a interface do Streamlit
