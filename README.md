@@ -1,4 +1,4 @@
-<center>
-  # APIs
-</center>
+
+# APIs
+
 Esse repositório contem a utilização de API'S utilizando Python com a interface do Streamlit
