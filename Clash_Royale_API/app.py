@@ -4,13 +4,16 @@ from deep_translator import GoogleTranslator
 import json
 
 @st.cache_resource
-def busca(url,headers):
-
+def busca(url, headers):
     try:
-        resposta = requests.get(url=url,headers=headers)
+        resposta = requests.get(url=url, headers=headers)
+        if resposta.status_code != 200:
+            st.error(f"Erro na requisição: {resposta.status_code}")
+            return None
         dados = resposta.json()
         return dados
-    except requests.exceptions.RequestException: 
+    except requests.exceptions.RequestException as e:
+        st.error(f"Erro na requisição: {e}")
         return None
 
 @st.cache_resource
@@ -75,6 +78,7 @@ with st.sidebar:
 
 if escolha=="Cartas":
     cartas()
+
 
 
 
