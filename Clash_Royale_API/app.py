@@ -15,7 +15,7 @@ def busca(url,headers):
 
 @st.cache_resource
 def carregar_traducoes():
-    with open("traducao_cartas.json", "r", encoding="utf-8") as f:
+    with open("Clash_Royale_API/traducao_cartas.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 # --- Função para traduzir nome da carta ---
@@ -75,6 +75,7 @@ with st.sidebar:
 
 if escolha=="Cartas":
     cartas()
+
 
 
 
