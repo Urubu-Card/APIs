@@ -24,7 +24,7 @@ def traduzir_carta(nome, traducoes):
 
 def cartas():
     
-    
+    API_KEY = st.secrets["API"]["API_KEY"]
     
     url = "https://api.clashroyale.com/v1/cards"
 
@@ -75,6 +75,7 @@ with st.sidebar:
 
 if escolha=="Cartas":
     cartas()
+
 
 
 
