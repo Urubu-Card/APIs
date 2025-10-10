@@ -7,8 +7,8 @@ import json
 def busca(url, headers):
     try:
         resposta = requests.get(url=url, headers=headers)
-        if resposta.status_code != 200:
-            st.error(f"Erro na requisição: {resposta.status_code}")
+        if resposta.status_code == 403:
+            st.error(f"Erro 403: Acesso proibido. Cabeçalhos: {resposta.headers}")
             return None
         dados = resposta.json()
         return dados
@@ -78,6 +78,7 @@ with st.sidebar:
 
 if escolha=="Cartas":
     cartas()
+
 
 
 
