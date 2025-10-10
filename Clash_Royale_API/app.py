@@ -39,7 +39,7 @@ def cartas():
 
     traducoes = carregar_traducoes()
 
-    st.write(dados)
+    
     for cartas in dados['items']:
         
         
@@ -79,6 +79,7 @@ with st.sidebar:
 
 if escolha=="Cartas":
     cartas()
+
 
 
 
