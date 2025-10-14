@@ -188,7 +188,7 @@ def main():
     
         dados_exibir = st.session_state['current_data']
         
-        COLUNAS_POR_LINHA = 2 #* <----Modificavel pra qualquer quantidade
+        COLUNAS_POR_LINHA = 3 #* <----Modificavel pra qualquer quantidade
         
         
         for i in range(0, len(dados_exibir), COLUNAS_POR_LINHA):
@@ -217,5 +217,6 @@ if __name__ == "__main__":
     main()
         
         
+
 
 
