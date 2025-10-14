@@ -118,7 +118,8 @@ def thema_def():
     """
     
     theme = st_theme()
-
+    tema = 'dark'
+    
     if theme:
         tema = theme.get('base')
 
@@ -216,3 +217,4 @@ if __name__ == "__main__":
     main()
         
         
+
