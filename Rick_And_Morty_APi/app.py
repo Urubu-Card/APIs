@@ -2,15 +2,14 @@ import streamlit as st
 import requests                                
 from streamlit_theme import st_theme    
 
-#!  Blibiotecas utilizadas : 
-
+#*  Blibiotecas utilizadas : 
 
 st.set_page_config(page_title="R&M API",page_icon="icone_light.png",layout="wide")
 
 
 def session_state():
     """
-!---   Define os Sessions States da paginas o que faz a pagina não quebrar com dois  ou tres cliques ---! 
+*   Define os Sessions States da paginas o que faz a pagina não quebrar com dois ou tres cliques e salvar dados* 
     """
     if 'next_url' not in st.session_state:
         st.session_state['next_url'] = None
@@ -21,10 +20,11 @@ def session_state():
     if 'dados' not in st.session_state:
         st.session_state['dados'] = None
 
+
 @st.cache_resource
 def busca(url):
     """
-!---   Faz a busca simples indo a busca da url entregando a resposta em JSON ---!
+*   Faz a busca simples indo a busca da url entregando a resposta em JSON  *
     """
     
     resposta = requests.get(url=url)
@@ -36,7 +36,7 @@ def busca(url):
 
 def dizer_atributos(personagem,container_coluna):
     """    
-!---    Diz o : nome, status(Vivo,Morto ou Desconhecido),gênero(Masculino,Feminino,Sem Gênero ou Desconhecido) junto com a foto do personagem ---"
+*---    Diz o : nome, status(Vivo,Morto ou Desconhecido),gênero(Masculino,Feminino,Sem Gênero ou Desconhecido) junto com a foto do personagem   ---*
     """
     
     with container_coluna:
@@ -96,7 +96,7 @@ def dizer_atributos(personagem,container_coluna):
 
 def avancar_pag():
     """
-    
+    * Faz a bsuca da proxima URL e mostra os dados continuos
     """
     
     url_proxima = st.session_state['next_url'] 
@@ -114,7 +114,7 @@ def avancar_pag():
         
 def thema_def():
     """
-!---    Define o titulo do Site e sua imagem dependendo do tema escolhido ---!
+*---    Define o titulo do Site e sua imagem dependendo do tema escolhido ---*
     """
     
     theme = st_theme()
@@ -140,14 +140,12 @@ def thema_def():
                 """,unsafe_allow_html=1)
 
 
-def cabeca():
+def main():
     
     session_state()
-    
     thema_def()
-    
-    
-    
+ 
+ 
     nome_Perso = st.text_input("Insira o nome do persongaem de Rick and Morty : ",placeholder="Ex: Rick Sanchez")
 
     st.set_page_config(layout="wide")
@@ -175,13 +173,13 @@ def cabeca():
             
         else:
             
-            # 1. Limpa a lista para a nova busca
+        
             st.session_state['current_data'] = []
             
-            # 2. Adiciona os resultados da primeira página à lista
-            st.session_state['current_data'].extend(dados['results']) # <-- Use .extend()
+          
+            st.session_state['current_data'].extend(dados['results']) 
             
-            # 3. Guarda a URL da próxima página
+            #* Guarda a URL da próxima página
             st.session_state['next_url'] = dados['info']['next']
             
             
@@ -189,7 +187,7 @@ def cabeca():
     
         dados_exibir = st.session_state['current_data']
         
-        COLUNAS_POR_LINHA = 3
+        COLUNAS_POR_LINHA = 2 #* <----Modificavel pra qualquer quantidade
         
         
         for i in range(0, len(dados_exibir), COLUNAS_POR_LINHA):
@@ -211,13 +209,10 @@ def cabeca():
         if st.session_state['next_url']:
             st.button("Proxima Página : ",on_click=avancar_pag)
             
-                        
-        
-        
         st.caption(f"{st.session_state['dados']['info']['count']} personagems encontrados.")
           
         
 if __name__ == "__main__":
-    cabeca()
+    main()
         
         
