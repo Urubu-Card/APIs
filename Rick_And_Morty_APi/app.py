@@ -134,11 +134,11 @@ def thema_def():
             st.image(image="https://raw.githubusercontent.com/Urubu-Card/API/refs/heads/main/Rick_And_Morty_APi/icone_light.png")
         
     with titulo:
-        st.markdown("""
+        st.html("""
                 
-                <h1 style="text-align:center">Rick and Morty API : </h1>
+                <h2 style="text-align:center">Rick and Morty API : </2>
                 <br>
-                """,unsafe_allow_html=1)
+                """)
 
 
 def main():
@@ -217,6 +217,7 @@ if __name__ == "__main__":
     main()
         
         
+
 
 
 
