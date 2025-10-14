@@ -1,1 +1,1 @@
-streamlit_theme==0.58.0
+st-theme
