@@ -136,7 +136,7 @@ def thema_def():
     with titulo:
         st.html("""
                 
-                <h2 style="text-align:center">Rick and Morty API : </2>
+                <h1 style="text-align:center">Rick and Morty API : </1>
                 <br>
                 """)
 
@@ -217,6 +217,7 @@ if __name__ == "__main__":
     main()
         
         
+
 
 
 
