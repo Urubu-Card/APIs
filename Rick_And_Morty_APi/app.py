@@ -4,7 +4,7 @@ from streamlit_theme import st_theme
 
 #*  Blibiotecas utilizadas : 
 
-st.set_page_config(page_title="R&M API",page_icon="icone_light.png",layout="wide")
+st.set_page_config(page_title="R&M API",page_icon="https://raw.githubusercontent.com/Urubu-Card/API/refs/heads/main/Rick_And_Morty_APi/icone_light.png",layout="wide")
 
 
 def session_state():
@@ -217,6 +217,7 @@ if __name__ == "__main__":
     main()
         
         
+
 
 
 
