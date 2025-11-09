@@ -210,6 +210,11 @@ def main():
         with st.container():
             falar_caracteristicas(st.session_state.dados_pokemon)
 
+
+    st.caption("Em breve ira haver formas de filtrar os pokemons
+
 if __name__ == '__main__':
 
     main()
+    
+
