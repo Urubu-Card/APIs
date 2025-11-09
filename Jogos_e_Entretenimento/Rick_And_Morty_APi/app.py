@@ -4,7 +4,7 @@ from streamlit_theme import st_theme
 
 #*  Blibiotecas utilizadas : 
 
-st.set_page_config(page_title="R&M API",page_icon="icone_light.png",layout="wide")
+st.set_page_config(page_title="R&M API",page_icon="Jogos_e_Entretenimento/Rick_And_Morty_APi/icone_light.png",layout="wide")
 
 
 def session_state():
@@ -127,10 +127,10 @@ def thema_def():
     with img:
         if tema == 'light':
             
-                st.image(image="icone_dark.png",)
+                st.image(image="Jogos_e_Entretenimento/Rick_And_Morty_APi/icone_dark.png",)
 
         else:
-            st.image(image="icone_light.png")
+            st.image(image="Jogos_e_Entretenimento/Rick_And_Morty_APi/icone_light.png")
         
     with titulo:
         st.markdown("""
@@ -219,3 +219,4 @@ if __name__ == "__main__":
     main()
         
         
+
