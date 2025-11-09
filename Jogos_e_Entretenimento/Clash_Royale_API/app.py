@@ -38,7 +38,8 @@ def cartas():
 
     traducoes = carregar_traducoes()
 
-
+    st.write(dados)
+    
     for cartas in dados['items']:
         
         
@@ -176,4 +177,5 @@ if escolha=="Cartas":
 
 if escolha =="Jogadores":
     players()
+
 
