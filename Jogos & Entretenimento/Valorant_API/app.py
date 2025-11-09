@@ -141,5 +141,12 @@ with st.sidebar:
     
     escolha = st.selectbox("Escolha uma função",("Agentes","Armas"))
     
-if escolha =="Agentes":
+if escolha     ==    "Agentes":
+
     agentes()
+
+elif escolha   ==    "Armas":
+
+    st.warning("⚠️ Área em Desenvolvimento ")
+
+            
