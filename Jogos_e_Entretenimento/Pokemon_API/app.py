@@ -3,7 +3,7 @@ import requests
 from deep_translator import GoogleTranslator
 import plotly.express as px
 
-st.set_page_config(page_title="PokéAPI",page_icon="icone.png")
+st.set_page_config(page_title="PokéAPI",page_icon="Jogos_e_Entretenimento/Pokemon_API/icone.png")
 
 
 def traduzir_texto(texto, linguagem='pt'):
@@ -211,4 +211,5 @@ def main():
             falar_caracteristicas(st.session_state.dados_pokemon)
 
 if __name__ == '__main__':
+
     main()
