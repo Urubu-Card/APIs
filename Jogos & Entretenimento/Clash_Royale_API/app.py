@@ -27,7 +27,7 @@ def traduzir_carta(nome, traducoes):
 
 def cartas():
     
-    API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZkY2NlZWYzLWMwNmYtNDRlNS04Zjg2LTE2MDM0YjE4NTQ2NyIsImlhdCI6MTc2MDk3MzcxMSwic3ViIjoiZGV2ZWxvcGVyLzQwYzRiMTZhLWUyM2MtOWE3YS1jNGE4LTM1ZGM0N2JmZmFhZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMzguMzYuNTcuMjA1Il0sInR5cGUiOiJjbGllbnQifV19.LbRiwhxu4kf6p4aRpiLLm1aWjZcx9OZsWQEYg1iQISEPKN_v0RY6BHfzwPCoK--SvJsI35GnAFRKqg-k1sKgfQ"
+    API_KEY = None
     url = "https://api.clashroyale.com/v1/cards"
 
     headers = {
@@ -177,3 +177,4 @@ if escolha=="Cartas":
 
 if escolha =="Jogadores":
     players()
+
