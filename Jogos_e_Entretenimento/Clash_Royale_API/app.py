@@ -1,6 +1,5 @@
 import streamlit as st
 import requests 
-from deep_translator import GoogleTranslator
 import json
 
 @st.cache_resource
@@ -17,7 +16,7 @@ def busca(url,headers):
 
 @st.cache_resource
 def carregar_traducoes():
-    with open("traducao_cartas.json", "r", encoding="utf-8") as f:
+    with open("Jogos_e_Entretenimento/Clash_Royale_API/traducao_cartas.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -64,35 +63,35 @@ def cartas():
                         st.markdown("### :blue[Comum]")
                         
                     with colImg:
-                        st.image("carta_Comum.png",width=50)    
+                        st.image("Jogos_e_Entretenimento/Clash_Royale_API/carta_Comum.png",width=50)    
                     
                 elif cartas['rarity'] == 'rare':
                     with colTipo:
                         st.markdown("### :orange[Raro]")
                         
                     with colImg:
-                        st.image("carta_Rara.png",width=50)  
+                        st.image("Jogos_e_Entretenimento/Clash_Royale_API/carta_Rara.png",width=50)  
                         
                 elif cartas['rarity'] == 'epic':
                     with colTipo:
                         st.markdown("### :violet[Épica]")
                         
                     with colImg:
-                        st.image("carta_Epica.png",width=50)  
+                        st.image("Jogos_e_Entretenimento/Clash_Royale_API/carta_Epica.png",width=50)  
                         
                 elif cartas['rarity'] == 'legendary':
                     with colTipo:
                         st.markdown("#### :rainbow[Lendaria]")
                         
                     with colImg:
-                        st.image("carta_Lendaria.png",width=50) 
+                        st.image("Jogos_e_Entretenimento/Clash_Royale_API/carta_Lendaria.png",width=50) 
                         
                 elif cartas['rarity'] == 'champion':
                     with colTipo:
                         st.markdown("#### :yellow[Campeão]")
                         
                     with colImg:
-                        st.image("carta_Campeao.png",width=50)
+                        st.image("Jogos_e_Entretenimento/Clash_Royale_API/carta_Campeao.png",width=50)
                 
                 
             with col2:
@@ -177,3 +176,4 @@ if escolha=="Cartas":
 
 if escolha =="Jogadores":
     players()
+
