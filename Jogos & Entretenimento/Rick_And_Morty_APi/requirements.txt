@@ -1,2 +1,1 @@
-streamlit
-streamlit_theme
+streamlit-theme
