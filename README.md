@@ -3,7 +3,7 @@
 <p>Esse projeto foi realizado para fins de aprendizado de conhecer como funciona a coleta de dados em APIs tanto publicas como APIs privadas,esse projeto foi bem interresante e aprendi muita coisa sobre APIs enquanto desenvolvi esse projeto</p>
 
 
-<h2 align="center"> /Jogos e Entretenimentos : </h2>
+<h1 align="center"> /Jogos e Entretenimentos : </h1>
 <p>Essa parte foi desenvolvida especialmente para APIs de jogos ou entretenimento em um geral </p>
   
 <h1 align="center"> /Chess.com :</h1>
