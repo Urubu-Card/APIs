@@ -33,11 +33,3 @@ Mais Iformaçoes em breve
 Mais Iformaçoes em breve
 
 
-
-## Cripto :
-
-Em progresso ⚠️
-
-## Art e Design :
-
-Em progresso ⚠️
