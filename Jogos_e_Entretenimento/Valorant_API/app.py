@@ -145,4 +145,4 @@ if escolha      ==  "Agentes":
     agentes()
     
 elif escolha    == "Armas":
-    st.warning("⚠️ Área em Desenvolvimento")
+    st.warning("⚠️ Work in Progress")
