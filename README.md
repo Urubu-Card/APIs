@@ -29,6 +29,6 @@ Mais Iformaçoes em breve
 Mais Iformaçoes em breve
 
 ### Valorant : 
-Essa aplicação coletou os dados da [API sobre valorant](https://valorant-api.com) que é uma api publica e tem varios dados sobre jogo,personagens e entre varios outros dados :
+Essa aplicação coletou os dados da [API sobre valorant](https://valorant-api.com) que é uma api publica e tem varios dados sobre jogo,personagens e entre varios outros dados :<br>
 https://valorantapi.streamlit.app/
 
