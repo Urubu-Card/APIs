@@ -3,57 +3,27 @@ import requests
 from deep_translator import GoogleTranslator
 import plotly.express as px
 
-st.set_page_config(page_title="PokéAPI",page_icon="icone.png")
+st.set_page_config(page_title="PokéAPI",page_icon="Jogos_e_Entretenimento/Pokemon_API/icone.png")
+
 
 def traduzir_texto(texto, linguagem='pt'):
     traducao = GoogleTranslator(source='en', target=linguagem).translate(texto)
     return traducao
 
 
-class Pokemon_API:
-    
-    BASE_URL = "https://pokeapi.co/api/v2"
-
-    @staticmethod
-    @st.cache_resource
-    def get(endpoint):
-        try:
-            resposta = requests.get(f"{Pokemon_API.BASE_URL}/{endpoint}")
-            return resposta.json()
-        except requests.exceptions.RequestException:
-            return None
-
+@st.cache_resource
+def busca(url):
+    """
+    !---   Faz a busca simples indo a busca da url entregando a resposta em JSON ---!
+    """
+    try:
+        resposta = requests.get(url=url)
+        dados = resposta.json()
+        return dados
+    except requests.exceptions.RequestException: 
+        return None
 
 
-
-class Buscar_Pokemon:
-    
-    def __init__(self,dados):
-        
-        self.nome           =  dados['name']
-        self.num_pokedex    =  dados['id']
-        self.tipos          =  dados['types']
-        self.atributos      =  dados['stats']
-        self.altura         =  dados['height']     / 10
-        self.peso           =  dados['weight']    / 10
-        self.habilidades    =  dados['abilities']
-        self.imagens        =  dados['sprites']['other']
-
-
-    def mostrar(self):
-        
-        col1 , col2 =st.columns(2)
-        
-        with col1:
-            st.title(f"{self.nome.replace('-'," ").capitalize()}")
-            
-            st.subheader(f"Número da Pokedex : {self.num_pokedex}")
-            
-            st.markdown("### Tipos do Pokémon :")
-            
-            cols_tipos = st.coluns(len(self.tipos))
-            
-            
 def falar_caracteristicas(dados):
     col1, col2 = st.columns(2)
 
@@ -240,5 +210,11 @@ def main():
         with st.container():
             falar_caracteristicas(st.session_state.dados_pokemon)
 
+
+    st.caption("Em breve ira haver formas de filtrar os pokemons")
+
 if __name__ == '__main__':
+
     main()
+    
+
